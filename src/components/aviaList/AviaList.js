@@ -79,6 +79,7 @@ class AviaList extends Component {
     formSubmit(event) {
         event.preventDefault();
 
+        //Сортировка по возрастанию цены
         if(this.state.selectedOptionSort == "ascendingPrice") {
             if (this.state.selectedOptionFilter == '' || this.state.selectedOptionAviacompany == '') {
                 this.setState(() => ({
@@ -107,6 +108,7 @@ class AviaList extends Component {
             }
         }
 
+        //Сортировка по убыванию цены
         if(this.state.selectedOptionSort == "descendingPrice") {
             if (this.state.selectedOptionFilter == '' || this.state.selectedOptionAviacompany == '') {
             this.setState(() => ({
@@ -135,6 +137,7 @@ class AviaList extends Component {
             }
         }
 
+        //Сортировка по времени в пути
         if(this.state.selectedOptionSort == "travelTime") {
             if (this.state.selectedOptionFilter == '' || this.state.selectedOptionAviacompany == '') {
             this.setState(() => ({
@@ -163,6 +166,7 @@ class AviaList extends Component {
             }
         }    
 
+        //Фильтрация "1 пересадка" с учетом пользовательской цены
         if(this.state.selectedOptionFilter == "oneTransfer") {
             if (this.state.selectedOptionAviacompany == '') {
             this.setState(() => ({
@@ -182,6 +186,7 @@ class AviaList extends Component {
             }
         }
 
+        //Фильтрация "без пересадок" с учетом пользовательской цены
         if(this.state.selectedOptionFilter == "withoutTransfer") {
             if (this.state.selectedOptionAviacompany == '') {
             this.setState(() => ({
@@ -201,6 +206,7 @@ class AviaList extends Component {
             }
         }
 
+        //Фильтрация по авиакомпании Polish Airlines
         if(this.state.selectedOptionAviacompany == "PolishAirlines") {
             if (this.state.selectedOptionFilter == '') {
             this.setState(() => ({
@@ -210,6 +216,7 @@ class AviaList extends Component {
             } 
         }
 
+        //Фильтрация по авиакомпании Аэрофлот
         if(this.state.selectedOptionAviacompany == "Airflot") {
             if (this.state.selectedOptionFilter == '') {
             this.setState(() => ({
